@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "backend/src/**/*"
+  ],
+  "exclude": [
+    "frontend",
+    "node_modules",
+    "dist",
+    "backend/dist"
+  ]
+}

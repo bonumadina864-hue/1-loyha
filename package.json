@@ -1,0 +1,13 @@
+{
+  "name": "pairly-monorepo",
+  "version": "1.0.0",
+  "description": "Pairly - Private 1-on-1 Messaging Application",
+  "scripts": {
+    "dev": "npm --prefix backend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "build:backend": "npm --prefix backend run build",
+    "test:backend": "npm --prefix backend test",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down"
+  }
+}
