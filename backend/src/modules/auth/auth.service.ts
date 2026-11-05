@@ -145,7 +145,7 @@ export class AuthService {
       payload = this.jwtService.verify(dto.refreshToken, {
         secret: this.configService.get<string>(
           'JWT_REFRESH_SECRET',
-          'pairly_super_secure_jwt_refresh_secret_key_2026_dev',
+          'tmtg_super_secure_jwt_refresh_secret_key_2026_dev',
         ),
       });
     } catch {
@@ -211,7 +211,7 @@ export class AuthService {
       {
         secret: this.configService.get<string>(
           'JWT_ACCESS_SECRET',
-          'pairly_super_secure_jwt_access_secret_key_2026_dev',
+          'tmtg_super_secure_jwt_access_secret_key_2026_dev',
         ),
         expiresIn: '15m',
       },
@@ -227,7 +227,7 @@ export class AuthService {
       {
         secret: this.configService.get<string>(
           'JWT_REFRESH_SECRET',
-          'pairly_super_secure_jwt_refresh_secret_key_2026_dev',
+          'tmtg_super_secure_jwt_refresh_secret_key_2026_dev',
         ),
         expiresIn: '30d',
       },
@@ -366,7 +366,7 @@ export class AuthService {
       {
         secret: this.configService.get<string>(
           'JWT_ACCESS_SECRET',
-          'pairly_super_secure_jwt_access_secret_key_2026_dev',
+          'tmtg_super_secure_jwt_access_secret_key_2026_dev',
         ),
         expiresIn: '15m',
       },
@@ -382,7 +382,7 @@ export class AuthService {
       {
         secret: this.configService.get<string>(
           'JWT_REFRESH_SECRET',
-          'pairly_super_secure_jwt_refresh_secret_key_2026_dev',
+          'tmtg_super_secure_jwt_refresh_secret_key_2026_dev',
         ),
         expiresIn: '30d',
       },

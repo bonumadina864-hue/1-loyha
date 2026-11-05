@@ -55,7 +55,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   useEffect(() => {
     if (isOpen) {
       // Load stored profile from backend/local
-      const savedProfile = localStorage.getItem(`fmtg_profile_${session.userId}`);
+      const savedProfile = localStorage.getItem(`tmtg_profile_${session.userId}`);
       if (savedProfile) {
         try {
           const parsed = JSON.parse(savedProfile);
@@ -70,7 +70,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       } else {
         const parts = session.fullName.split(' ');
         setFirstName(parts[0] || 'User');
-        setLastName(parts.slice(1).join(' ') || 'FMTg');
+        setLastName(parts.slice(1).join(' ') || 'TMTg');
         setGoogleAccount(session.email || 'user@gmail.com');
         setGoogleConnected(true);
       }
@@ -87,7 +87,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       googleAccount,
       googleConnected,
     };
-    localStorage.setItem(`fmtg_profile_${session.userId}`, JSON.stringify(profileData));
+    localStorage.setItem(`tmtg_profile_${session.userId}`, JSON.stringify(profileData));
     setIsSaved(true);
     setTimeout(() => setIsSaved(false), 2000);
   };
@@ -100,7 +100,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         setGoogleAccount(email.trim());
         setGoogleConnected(true);
         localStorage.setItem(
-          `fmtg_profile_${session.userId}`,
+          `tmtg_profile_${session.userId}`,
           JSON.stringify({
             firstName,
             lastName,
@@ -126,7 +126,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
     }
 
     if (!deleteConfirmGoogleEmail.trim() || !deleteConfirmGooglePassword.trim()) {
-      setDeleteError('FMTg hisobini to‘liq o‘chirish uchun Google pochtangiz va parolingizni kiritishingiz shart!');
+      setDeleteError('TMTg hisobini to‘liq o‘chirish uchun Google pochtangiz va parolingizni kiritishingiz shart!');
       return;
     }
 
@@ -160,7 +160,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         <div className="flex items-center justify-between mb-5 pb-3 border-b border-border-subtle">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-accent-primary to-accent-teal flex items-center justify-center font-bold text-white shadow-md text-sm">
-              FM
+              TM
             </div>
             <div>
               <h3 className="text-base font-bold text-text-primary">
@@ -307,7 +307,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 )}
               </div>
               <p className="text-[11px] text-text-tertiary leading-relaxed">
-                * Google akkaunti FMTg ilovasidagi hisobingizni to‘liq va xavfsiz o‘chirish paytida tasdiqlash uchun xizmat qiladi.
+                * Google akkaunti TMTg ilovasidagi hisobingizni to‘liq va xavfsiz o‘chirish paytida tasdiqlash uchun xizmat qiladi.
               </p>
             </div>
 

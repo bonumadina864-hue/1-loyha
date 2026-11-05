@@ -59,7 +59,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setAuthError(null);
 
     // Exact master login & password required
-    const validLogin = adminLogin.trim().toLowerCase() === 'fmtg';
+    const validLogin = adminLogin.trim().toLowerCase() === 'tmtg';
     const validPass = adminPassword.trim() === '16.03.29.04.10.09';
 
     if (validLogin && validPass) {
@@ -93,7 +93,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       const pairsData = await api.getAdminPairs().catch(() => ({
         items: [
           {
-            pairId: 'fmtg-pair-alice-bob',
+            pairId: 'tmtg-pair-alice-bob',
             userA: { publicId: '849201934', fullName: 'Alice' },
             userB: { publicId: '109482710', fullName: 'Bob' },
             messageCount: 46,
@@ -162,7 +162,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         <div className="p-5 border-b border-border-subtle flex items-center justify-between bg-bg-secondary/70">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold">
-              FM
+              TM
             </div>
             <div>
               <h2 className="text-base font-bold text-text-primary flex items-center gap-2">
@@ -197,7 +197,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
           </div>
         </div>
 
-        {/* LOCKED GATE: If not yet authenticated with master FMTg / 16.03.29.04.10.09 */}
+        {/* LOCKED GATE: If not yet authenticated with master TMTg / 16.03.29.04.10.09 */}
         {!isAuthenticated ? (
           <div className="flex-1 p-8 flex flex-col items-center justify-center text-center">
             <div className="w-16 h-16 rounded-3xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-4 shadow-lg shadow-indigo-600/10">
@@ -208,7 +208,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               {t.adminLocked}
             </h3>
             <p className="text-xs text-text-secondary max-w-sm mb-6 leading-relaxed">
-              Bu bo'lim faqat FMTg ilova egasi uchun himoyalangan. Kirish uchun maxsus login va parolni kiriting.
+              Bu bo'lim faqat TMTg ilova egasi uchun himoyalangan. Kirish uchun maxsus login va parolni kiriting.
             </p>
 
             {authError && (

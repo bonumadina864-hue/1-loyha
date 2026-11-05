@@ -18,7 +18,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
       useFactory: (config: ConfigService) => ({
         secret: config.get<string>(
           'JWT_ACCESS_SECRET',
-          'pairly_super_secure_jwt_access_secret_key_2026_dev',
+          'tmtg_super_secure_jwt_access_secret_key_2026_dev',
         ),
         signOptions: { expiresIn: '15m' },
       }),

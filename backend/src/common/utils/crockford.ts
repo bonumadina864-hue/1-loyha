@@ -19,8 +19,8 @@ export function generateCrockfordId(length = 10): string {
  */
 export function isValidCrockfordId(id: string): boolean {
   if (!id) return false;
-  // Accepts numeric ID of length 8 to 12 digits, or legacy crockford for backwards compatibility
-  const numericRegex = /^\d{6,12}$/;
+  // Accepts 10-digit numeric ID, or 10-char legacy crockford
+  const numericRegex = /^\d{10}$/;
   const legacyRegex = /^[0-9ABCDEFGHJKMNPQRSTVWXYZ]{10}$/i;
   return numericRegex.test(id.trim()) || legacyRegex.test(id.trim());
 }

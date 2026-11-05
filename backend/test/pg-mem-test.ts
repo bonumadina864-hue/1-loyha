@@ -10,7 +10,7 @@ async function test() {
   });
   db.public.registerFunction({
     name: 'current_database',
-    implementation: () => 'pairly',
+    implementation: () => 'tmtg',
   });
   db.public.registerFunction({
     name: 'uuid_generate_v4',

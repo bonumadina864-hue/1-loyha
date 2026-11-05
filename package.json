@@ -1,7 +1,7 @@
 {
-  "name": "pairly-monorepo",
+  "name": "tmtg",
   "version": "1.0.0",
-  "description": "Pairly - Private 1-on-1 Messaging Application",
+  "description": "TMTg - Ultra-Private 1-on-1 Messaging Application",
   "scripts": {
     "dev": "npm --prefix backend run dev",
     "dev:backend": "npm --prefix backend run dev",

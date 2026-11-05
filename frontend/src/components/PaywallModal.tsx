@@ -31,7 +31,7 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
           <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-tr from-accent-primary to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30">
             <Crown className="w-7 h-7 text-amber-300" />
           </div>
-          <h3 className="text-xl font-bold text-text-primary">Pairly Premium Privacy</h3>
+          <h3 className="text-xl font-bold text-text-primary">TMTg Premium Privacy</h3>
           <p className="text-xs text-text-secondary mt-1">
             State-of-the-art privacy mechanisms for uncompromising security
           </p>
@@ -74,7 +74,7 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
           onClick={onSubscribe}
           className="w-full py-4 rounded-2xl bg-gradient-to-r from-accent-primary to-purple-600 text-white font-bold text-sm shadow-xl shadow-purple-600/30 hover:opacity-95 transition active:scale-[0.98]"
         >
-          Activate Pairly Premium
+          Activate TMTg Premium
         </button>
       </div>
     </div>

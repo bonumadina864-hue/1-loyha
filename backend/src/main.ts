@@ -7,7 +7,7 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
 
 async function bootstrap() {
-  const logger = new Logger('PairlyBootstrap');
+  const logger = new Logger('TMTgBootstrap');
   const app = await NestFactory.create(AppModule);
 
   const configService = app.get(ConfigService);
@@ -34,7 +34,7 @@ async function bootstrap() {
 
   // Swagger Interactive Documentation & Visual UI
   const config = new DocumentBuilder()
-    .setTitle('Pairly Private Messaging API')
+    .setTitle('TMTg Private Messaging API')
     .setDescription(
       'Private 1-on-1 messaging platform with Envelope Encryption, Audited Admin Restoration, and Privacy Controls',
     )
@@ -47,11 +47,11 @@ async function bootstrap() {
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document, {
-    customSiteTitle: 'Pairly API Visual Dashboard',
+    customSiteTitle: 'TMTg API Visual Dashboard',
   });
 
   await app.listen(port);
-  logger.log(`🚀 Pairly Backend running on port ${port} [NODE_ENV=${nodeEnv}]`);
+  logger.log(`🚀 TMTg Backend running on port ${port} [NODE_ENV=${nodeEnv}]`);
   logger.log(`🌐 Visual Interactive Dashboard available at: http://localhost:${port}/api`);
   if (nodeEnv === 'development' && enableDevLogin === 'true') {
     logger.warn('⚠️  Dev-Login route ACTIVE at POST /auth/dev-login');

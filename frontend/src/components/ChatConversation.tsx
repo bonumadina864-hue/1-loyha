@@ -145,7 +145,7 @@ export const ChatConversation: React.FC<ChatConversationProps> = ({
         <div className="text-center my-2">
           <span className="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full bg-bg-secondary/60 border border-white/5 text-[10px] text-text-tertiary shadow-sm">
             <Lock className="w-3 h-3 text-indigo-400" />
-            <span>FMTg Server-Encrypted Vault • Begona qaraganda avtomatik o‘chish himoyasi</span>
+            <span>TMTg Server-Encrypted Vault • Begona qaraganda avtomatik o‘chish himoyasi</span>
           </span>
         </div>
 

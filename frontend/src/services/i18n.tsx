@@ -4,17 +4,17 @@ export type Language = 'uz' | 'ru' | 'en';
 
 export const translations = {
   uz: {
-    appName: 'FMTg',
+    appName: 'TMTg',
     appTagline: 'Server-Shifrlangan va Xavfsiz 1-on-1 Messenger',
     secureBadge: 'AES-256-GCM Shifrlangan & Admin Qayta Tiklash',
     simulate: 'Simulyatsiya',
     adminPanel: 'Admin Panel',
     adminLocked: 'Admin Panel Qulflangan',
-    adminLoginPlaceholder: 'Admin login (FMTg)',
+    adminLoginPlaceholder: 'Admin login (TMTg)',
     adminPassPlaceholder: 'Admin parol (16.03.29.04.10.09)',
     adminLoginBtn: 'Kirish',
     adminLogoutBtn: 'Chiqish',
-    adminAuthError: 'Xato! Faqat FMTg va to‘g‘ri parol orqali kirish mumkin.',
+    adminAuthError: 'Xato! Faqat TMTg va to‘g‘ri parol orqali kirish mumkin.',
     adminHelpText: 'Admin paneli maxsus qulflangan. Xabarlar matni admin uchun ham to‘liq maxfiy (ko‘rinmaydi).',
     privacySettings: 'Xavfsizlik Sozlamalari',
     lockWithBiometrics: 'Face ID bilan qulflash',
@@ -57,12 +57,12 @@ export const translations = {
     googleAccount: 'Google Akkaunt',
     googleConnectBtn: 'Google akkauntni ulash',
     googleConnected: 'Google akkaunt muvaffaqiyatli ulangan',
-    deleteAccountTitle: 'FMTg Akkauntini To‘liq O‘chirish',
+    deleteAccountTitle: 'TMTg Akkauntini To‘liq O‘chirish',
     deleteAccountWarning: 'Diqqat! Akkauntni o‘chirish uchun ulangan Google hisobingiz va parolingiz kiritilishi shart!',
     googleEmailPlaceholder: 'Google elektron pochta...',
     googlePasswordPlaceholder: 'Google paroli...',
     deleteAccountBtn: 'Akkauntni butunlay o‘chirish',
-    deleteSuccess: 'FMTg akkauntingiz butunlay o‘chirildi!',
+    deleteSuccess: 'TMTg akkauntingiz butunlay o‘chirildi!',
     saveChanges: 'Saqlash',
     ticketApproved: 'Ariza tasdiqlandi. 1 marta bosish orqali xabarlarni qaytaring.',
     restoreExecuteBtn: 'Foydalanuvchilarga Chatni Qaytarish',
@@ -72,17 +72,17 @@ export const translations = {
     language: 'Til',
   },
   ru: {
-    appName: 'FMTg',
+    appName: 'TMTg',
     appTagline: 'Серверно-зашифрованный приватный 1-на-1 мессенджер',
     secureBadge: 'AES-256-GCM Шифрование и Аудированное восстановление',
     simulate: 'Симуляция',
     adminPanel: 'Админ-панель',
     adminLocked: 'Админ-панель заблокирована',
-    adminLoginPlaceholder: 'Логин админа (FMTg)',
+    adminLoginPlaceholder: 'Логин админа (TMTg)',
     adminPassPlaceholder: 'Пароль админа (16.03.29.04.10.09)',
     adminLoginBtn: 'Войти',
     adminLogoutBtn: 'Выйти',
-    adminAuthError: 'Ошибка! Доступ разрешен только для логина FMTg и верного пароля.',
+    adminAuthError: 'Ошибка! Доступ разрешен только для логина TMTg и верного пароля.',
     adminHelpText: 'Панель администратора защищена. Текст сообщений скрыт даже от администратора (Zero-Knowledge).',
     privacySettings: 'Настройки приватности',
     lockWithBiometrics: 'Заблокировать Face ID',
@@ -125,12 +125,12 @@ export const translations = {
     googleAccount: 'Google Аккаунт',
     googleConnectBtn: 'Привязать Google аккаунт',
     googleConnected: 'Google аккаунт успешно привязан',
-    deleteAccountTitle: 'Полное удаление аккаунта FMTg',
+    deleteAccountTitle: 'Полное удаление аккаунта TMTg',
     deleteAccountWarning: 'Внимание! Для удаления необходимо ввести привязанный Google аккаунт и пароль!',
     googleEmailPlaceholder: 'Почта Google...',
     googlePasswordPlaceholder: 'Пароль Google...',
     deleteAccountBtn: 'Безвозвратно удалить аккаунт',
-    deleteSuccess: 'Ваш аккаунт FMTg полностью удален!',
+    deleteSuccess: 'Ваш аккаунт TMTg полностью удален!',
     saveChanges: 'Сохранить',
     ticketApproved: 'Заявка одобрена. Восстановите чат в 1 клик.',
     restoreExecuteBtn: 'Вернуть переписку пользователям',
@@ -140,17 +140,17 @@ export const translations = {
     language: 'Язык',
   },
   en: {
-    appName: 'FMTg',
+    appName: 'TMTg',
     appTagline: 'Server-Encrypted Ultra-Private 1-on-1 Messenger',
     secureBadge: 'AES-256-GCM Encrypted & Audited Recovery',
     simulate: 'Simulate',
     adminPanel: 'Admin Panel',
     adminLocked: 'Admin Panel Locked',
-    adminLoginPlaceholder: 'Admin login (FMTg)',
+    adminLoginPlaceholder: 'Admin login (TMTg)',
     adminPassPlaceholder: 'Admin password (16.03.29.04.10.09)',
     adminLoginBtn: 'Login',
     adminLogoutBtn: 'Log Out',
-    adminAuthError: 'Access Denied! Authorized only for login FMTg with valid master password.',
+    adminAuthError: 'Access Denied! Authorized only for login TMTg with valid master password.',
     adminHelpText: 'Admin panel is strictly guarded. Chat content remains private and hidden from admins (Zero-Knowledge).',
     privacySettings: 'Privacy Settings',
     lockWithBiometrics: 'Lock with Face ID',
@@ -193,12 +193,12 @@ export const translations = {
     googleAccount: 'Google Account',
     googleConnectBtn: 'Connect Google Account',
     googleConnected: 'Google account connected',
-    deleteAccountTitle: 'Permanently Delete FMTg Account',
+    deleteAccountTitle: 'Permanently Delete TMTg Account',
     deleteAccountWarning: 'Notice: Deleting your account requires verifying your connected Google credentials!',
     googleEmailPlaceholder: 'Google email address...',
     googlePasswordPlaceholder: 'Google password...',
     deleteAccountBtn: 'Permanently Delete Account',
-    deleteSuccess: 'Your FMTg account and keys have been permanently wiped!',
+    deleteSuccess: 'Your TMTg account and keys have been permanently wiped!',
     saveChanges: 'Save Changes',
     ticketApproved: 'Ticket approved. Execute 1-click restoration.',
     restoreExecuteBtn: 'Restore Chat to Users',
@@ -223,12 +223,12 @@ const I18nContext = createContext<I18nContextType>({
 
 export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    return (localStorage.getItem('fmtg_language') as Language) || 'uz';
+    return (localStorage.getItem('tmtg_language') as Language) || 'uz';
   });
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('fmtg_language', lang);
+    localStorage.setItem('tmtg_language', lang);
   };
 
   const t = translations[language] || translations.uz;

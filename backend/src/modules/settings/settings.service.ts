@@ -176,7 +176,7 @@ export class SettingsService {
     // Google verification check if required
     if (user.googleConnected || user.googleAccount) {
       if (!dto.googleAccount || !dto.googlePassword) {
-        throw new BadRequestException('FMTg hisobini to‘liq o‘chirish uchun ulangan Google hisobi va paroli kiritilishi shart!');
+        throw new BadRequestException('TMTg hisobini to‘liq o‘chirish uchun ulangan Google hisobi va paroli kiritilishi shart!');
       }
     }
 

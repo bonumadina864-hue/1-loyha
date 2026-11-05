@@ -29,7 +29,7 @@ export class RequirePremiumGuard implements CanActivate {
 
     if (!sub || sub.tier !== 'premium') {
       throw new ForbiddenException(
-        'This feature requires an active Pairly Premium subscription',
+        'This feature requires an active TMTg Premium subscription',
       );
     }
 

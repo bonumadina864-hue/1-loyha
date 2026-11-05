@@ -117,7 +117,7 @@ export const ChatList: React.FC<ChatListProps> = ({
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-accent-primary to-accent-teal flex items-center justify-center font-black text-xs text-white shadow-md shadow-indigo-600/20">
-              FM
+              TM
             </div>
             <div>
               <div className="text-sm font-bold text-text-primary leading-tight">

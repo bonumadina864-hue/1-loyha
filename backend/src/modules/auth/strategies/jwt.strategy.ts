@@ -16,7 +16,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
       ignoreExpiration: false,
       secretOrKey: configService.get<string>(
         'JWT_ACCESS_SECRET',
-        'pairly_super_secure_jwt_access_secret_key_2026_dev',
+        'tmtg_super_secure_jwt_access_secret_key_2026_dev',
       ),
       passReqToCallback: true,
     });

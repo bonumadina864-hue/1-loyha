@@ -23,7 +23,7 @@ export class DevLoginController {
     if (process.env.NODE_ENV === 'production' || process.env.ENABLE_DEV_LOGIN !== 'true') {
       throw new ForbiddenException('Dev login is physically disabled in production builds');
     }
-    const email = dto?.email || 'dev@pairly.local';
+    const email = dto?.email || 'dev@tmtg.local';
     return this.authService.devLogin(email);
   }
 }

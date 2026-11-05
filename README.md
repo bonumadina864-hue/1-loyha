@@ -1,8 +1,8 @@
-# Pairly — Private 1-on-1 Messaging Application
+# TMTg — Ultra-Private 1-on-1 Messaging Application
 
 > **Security & Privacy Model**: *Server-Encrypted with Audited Admin Recovery* (AES-256-GCM Envelope Encryption).
 
-Pairly is a high-security, strictly 1-on-1 private messaging platform featuring biometric vault locking, tamper-evident audit logging, zero message previews in chat lists, and ticket-based chat restoration.
+TMTg is a high-security, strictly 1-on-1 private messaging platform featuring biometric Face ID vault locking, anti-peeping intruder detection with automatic chat purging, tamper-evident audit logging, zero message previews in chat lists, and ticket-based chat restoration (90-day retention).
 
 ---
 
@@ -20,9 +20,10 @@ Pairly is a high-security, strictly 1-on-1 private messaging platform featuring 
   - React 18 + Vite + TypeScript
   - Tailwind CSS with custom **Calm Security** design system
   - Lucide Icons
-  - Biometric Lock Screen simulation (FaceID / Fingerprint / PIN fallback)
-  - 1-on-1 chat conversation interface & live user switcher (Alice / Bob)
-  - Admin Panel modal for audited restoration tickets & KPIs
+  - Biometric Face ID Lock Screen with real-time face matching & anti-peeping radar
+  - Strictly 1-on-1 chat conversation interface & live user switcher (Alice / Bob)
+  - Admin Panel modal for audited restoration tickets & KPIs (Master Login: `TMTg`, Password: `16.03.29.04.10.09`)
+  - 3-language switch (Uzbek, Russian, English)
 
 ---
 
@@ -67,16 +68,16 @@ cd frontend
 npm run dev
 ```
 
-Open your browser at `http://localhost:5173` to access the Pairly application.
+Open your browser at `http://localhost:5173` to access the TMTg application.
 Backend Swagger API documentation is available at `http://localhost:3000/api`.
 
 ---
 
 ## 🔒 Security & Admin Restoration Model
-Pairly implements **Server-Encrypted Envelope Encryption with Audited Admin Recovery**:
+TMTg implements **Server-Encrypted Envelope Encryption with Audited Admin Recovery**:
 - All messages are encrypted with unique Data Encryption Keys (DEKs).
 - Administrators cannot browse plaintext messages freely.
-- Chat restoration requires an approved, ticketed workflow recorded in an append-only audit trail.
+- Chat restoration requires an approved, ticketed workflow recorded in an append-only audit trail (90-day retention).
 
 ---
 

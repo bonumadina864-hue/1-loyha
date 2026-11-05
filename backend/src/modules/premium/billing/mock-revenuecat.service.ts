@@ -40,7 +40,7 @@ export class MockRevenueCatService implements BillingProvider {
       isValid: true,
       tier: 'premium',
       status: 'active',
-      productId: productId || 'pairly_premium_monthly',
+      productId: productId || 'tmtg_premium_monthly',
       transactionId: `mock_tx_${Date.now()}`,
       expiresAt,
       gracePeriodEndsAt,
@@ -51,6 +51,6 @@ export class MockRevenueCatService implements BillingProvider {
     platform: 'ios' | 'android',
     receiptData: string,
   ): Promise<ReceiptVerificationResult> {
-    return this.verifyReceipt(platform, receiptData, 'pairly_premium_monthly');
+    return this.verifyReceipt(platform, receiptData, 'tmtg_premium_monthly');
   }
 }

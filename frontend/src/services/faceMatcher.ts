@@ -9,7 +9,7 @@ export interface EnrolledFaceProfile {
   enrolledAt: string;
 }
 
-const STORAGE_KEY = 'fmtg_enrolled_owner_template';
+const STORAGE_KEY = 'tmtg_enrolled_owner_template';
 
 export function saveEnrolledProfile(profile: EnrolledFaceProfile): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));

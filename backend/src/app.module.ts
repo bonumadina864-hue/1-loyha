@@ -29,7 +29,7 @@ import { createDatabaseDataSource } from './database/data-source.factory';
         port: config.get<number>('DATABASE_PORT', 5432),
         username: config.get<string>('DATABASE_USER', 'postgres'),
         password: config.get<string>('DATABASE_PASSWORD', 'postgres'),
-        database: config.get<string>('DATABASE_NAME', 'pairly'),
+        database: config.get<string>('DATABASE_NAME', 'tmtg'),
         entities: Object.values(entities),
         synchronize: true,
         ssl: config.get<string>('DATABASE_SSL') === 'true' ? { rejectUnauthorized: false } : false,

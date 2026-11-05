@@ -22,10 +22,10 @@ export class CryptoService {
   private readonly kekId: string = 'env-kek-v1';
 
   constructor(private readonly configService: ConfigService) {
-    const kekHex = this.configService.get<string>('PAIRLY_KEK');
+    const kekHex = this.configService.get<string>('TMTG_KEK');
     if (!kekHex || kekHex.length !== 64) {
       throw new Error(
-        'PAIRLY_KEK must be a 64-character hex string representing a 32-byte key.',
+        'TMTG_KEK must be a 64-character hex string representing a 32-byte key.',
       );
     }
     this.kek = Buffer.from(kekHex, 'hex');

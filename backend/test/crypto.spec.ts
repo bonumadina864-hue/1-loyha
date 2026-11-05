@@ -13,7 +13,7 @@ describe('CryptoService (Envelope Encryption)', () => {
           provide: ConfigService,
           useValue: {
             get: jest.fn().mockImplementation((key: string) => {
-              if (key === 'PAIRLY_KEK') {
+              if (key === 'TMTG_KEK') {
                 return '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
               }
               return null;

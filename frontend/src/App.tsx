@@ -35,7 +35,7 @@ function AppContent() {
 
   // Initialize with quick dev-login on startup
   useEffect(() => {
-    loginAs('alice@fmtg.local');
+    loginAs('alice@tmtg.local');
   }, []);
 
   const loginAs = async (email: string) => {
@@ -48,8 +48,8 @@ function AppContent() {
         fullName: isAlice ? 'Alice' : 'Bob',
         email,
         phone: isAlice ? '+998901234567' : '+998909876543',
-        accessToken: 'fmtg-jwt-token',
-        refreshToken: 'fmtg-refresh-token',
+        accessToken: 'tmtg-jwt-token',
+        refreshToken: 'tmtg-refresh-token',
         expiresIn: 3600,
       };
 
@@ -91,7 +91,7 @@ function AppContent() {
       const otherId = isAlice ? 'bob-id' : 'alice-id';
       const myId = session?.userId || 'my-id';
 
-      const savedChat = localStorage.getItem(`fmtg_chat_${activePairId}`);
+      const savedChat = localStorage.getItem(`tmtg_chat_${activePairId}`);
       if (savedChat) {
         try {
           const parsed = JSON.parse(savedChat);
@@ -109,7 +109,7 @@ function AppContent() {
           pairId: 'demo-pair-alice-bob',
           senderId: otherId,
           type: 'text',
-          content: 'Salom! FMTg maxfiy 1-on-1 xavfsiz chatiga xush kelibsiz 🔒',
+          content: 'Salom! TMTg maxfiy 1-on-1 xavfsiz chatiga xush kelibsiz 🔒',
           deliveredAt: new Date(Date.now() - 300000).toISOString(),
           readAt: new Date(Date.now() - 250000).toISOString(),
           createdAt: new Date(Date.now() - 300000).toISOString(),
@@ -138,7 +138,7 @@ function AppContent() {
 
       setMessages(initialMsgs);
       setBackupMessages(initialMsgs);
-      localStorage.setItem(`fmtg_chat_${activePairId}`, JSON.stringify(initialMsgs));
+      localStorage.setItem(`tmtg_chat_${activePairId}`, JSON.stringify(initialMsgs));
     }
   }, [activePairId, session]);
 
@@ -159,7 +159,7 @@ function AppContent() {
 
     setMessages((prev) => {
       const updated = [...prev, optimisticMessage];
-      localStorage.setItem(`fmtg_chat_${activePairId}`, JSON.stringify(updated));
+      localStorage.setItem(`tmtg_chat_${activePairId}`, JSON.stringify(updated));
       return updated;
     });
     setBackupMessages((prev) => [...prev, optimisticMessage]);
@@ -179,7 +179,7 @@ function AppContent() {
   const handleClearChat = () => {
     setMessages([]);
     if (activePairId) {
-      localStorage.removeItem(`fmtg_chat_${activePairId}`);
+      localStorage.removeItem(`tmtg_chat_${activePairId}`);
     }
   };
 
@@ -206,7 +206,7 @@ function AppContent() {
     }
     setMessages(restored);
     setBackupMessages(restored);
-    localStorage.setItem(`fmtg_chat_${pairId}`, JSON.stringify(restored));
+    localStorage.setItem(`tmtg_chat_${pairId}`, JSON.stringify(restored));
   };
 
   const activePair = pairs.find((p) => p.pairId === activePairId);
@@ -230,7 +230,7 @@ function AppContent() {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-accent-primary to-accent-teal flex items-center justify-center text-white font-black text-xs shadow-md shadow-indigo-600/30">
-              FM
+              TM
             </div>
             <span className="font-black tracking-tight text-base bg-gradient-to-r from-indigo-200 via-white to-teal-200 bg-clip-text text-transparent">
               {t.appName}
@@ -265,9 +265,9 @@ function AppContent() {
           {/* Dev Switcher to test Alice & Bob */}
           <div className="hidden sm:flex items-center gap-1 p-1 rounded-xl bg-bg-tertiary/80 border border-white/5 text-xs">
             <button
-              onClick={() => loginAs('alice@fmtg.local')}
+              onClick={() => loginAs('alice@tmtg.local')}
               className={`px-2 py-0.5 rounded-lg font-bold text-xs transition ${
-                session?.email === 'alice@fmtg.local'
+                session?.email === 'alice@tmtg.local'
                   ? 'bg-accent-primary text-white'
                   : 'text-text-secondary hover:text-white'
               }`}
@@ -275,9 +275,9 @@ function AppContent() {
               Alice
             </button>
             <button
-              onClick={() => loginAs('bob@fmtg.local')}
+              onClick={() => loginAs('bob@tmtg.local')}
               className={`px-2 py-0.5 rounded-lg font-bold text-xs transition ${
-                session?.email === 'bob@fmtg.local'
+                session?.email === 'bob@tmtg.local'
                   ? 'bg-accent-primary text-white'
                   : 'text-text-secondary hover:text-white'
               }`}
@@ -286,7 +286,7 @@ function AppContent() {
             </button>
           </div>
 
-          {/* REQUIREMENT 2: Admin Panel Button (Opens password-locked gate: FMTg / 16.03.29.04.10.09) */}
+          {/* REQUIREMENT 2: Admin Panel Button (Opens password-locked gate: TMTg / 16.03.29.04.10.09) */}
           <button
             onClick={() => setIsAdminOpen(true)}
             className="p-2 rounded-xl bg-bg-tertiary hover:bg-white/10 text-indigo-300 hover:text-white transition flex items-center gap-1.5 text-xs font-medium"

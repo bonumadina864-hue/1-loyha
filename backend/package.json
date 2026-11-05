@@ -1,8 +1,8 @@
 {
-  "name": "pairly-backend",
+  "name": "tmtg-backend",
   "version": "1.0.0",
-  "description": "Pairly Private Messaging Backend - NestJS",
-  "author": "Pairly Engineering",
+  "description": "TMTg Private Messaging Backend - NestJS",
+  "author": "TMTg Engineering",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

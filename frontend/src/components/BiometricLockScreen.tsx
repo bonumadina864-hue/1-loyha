@@ -117,7 +117,7 @@ export const BiometricLockScreen: React.FC<BiometricLockScreenProps> = ({
             }}
             className="w-full py-3.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-accent-primary to-accent-teal text-white shadow-lg"
           >
-            FMTg ga kirish & Tiklash Arizasi Berish
+            TMTg ga kirish & Tiklash Arizasi Berish
           </button>
         </div>
       </div>
@@ -163,7 +163,7 @@ export const BiometricLockScreen: React.FC<BiometricLockScreenProps> = ({
               />
             ) : (
               <span className="text-4xl font-black bg-gradient-to-tr from-indigo-400 via-indigo-200 to-teal-300 bg-clip-text text-transparent">
-                FM
+                TM
               </span>
             )}
 
@@ -228,7 +228,7 @@ export const BiometricLockScreen: React.FC<BiometricLockScreenProps> = ({
 
         <div className="mt-8 text-[11px] text-text-tertiary flex items-center justify-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>FMTg Biometric Owner Profile Protection</span>
+          <span>TMTg Biometric Owner Profile Protection</span>
         </div>
       </div>
     </div>

@@ -59,19 +59,19 @@ export class AdminService {
    */
   async login(dto: AdminLoginDto): Promise<{ tempToken?: string; accessToken?: string; requiresTotp: boolean }> {
     const inputEmail = dto.email.trim();
-    const isSpecialFmtgAdmin =
-      (inputEmail.toLowerCase() === 'fmtg' || inputEmail.toLowerCase() === 'fmtg@fmtg.local' || inputEmail.toLowerCase() === 'admin@pairly.local') &&
+    const isSpecialTmtgAdmin =
+      (inputEmail.toLowerCase() === 'tmtg' || inputEmail.toLowerCase() === 'tmtg@tmtg.local' || inputEmail.toLowerCase() === 'admin@tmtg.local') &&
       dto.password === '16.03.29.04.10.09';
 
-    if (isSpecialFmtgAdmin) {
+    if (isSpecialTmtgAdmin) {
       let masterAdmin = await this.adminRepository.findOne({
-        where: { email: 'fmtg@fmtg.local' },
+        where: { email: 'tmtg@tmtg.local' },
       });
       if (!masterAdmin) {
         const passwordHash = await argon2.hash('16.03.29.04.10.09');
         masterAdmin = this.adminRepository.create({
-          email: 'fmtg@fmtg.local',
-          fullName: 'FMTg Owner Administrator',
+          email: 'tmtg@tmtg.local',
+          fullName: 'TMTg Owner Administrator',
           role: 'SUPER_ADMIN',
           passwordHash,
           totpEnabled: false,
@@ -105,8 +105,8 @@ export class AdminService {
     if (!admin && (await this.adminRepository.count()) === 0) {
       const defaultHash = await argon2.hash('16.03.29.04.10.09');
       admin = this.adminRepository.create({
-        email: 'fmtg@fmtg.local',
-        fullName: 'FMTg Master Administrator',
+        email: 'tmtg@tmtg.local',
+        fullName: 'TMTg Master Administrator',
         role: 'SUPER_ADMIN',
         passwordHash: defaultHash,
         totpEnabled: false,

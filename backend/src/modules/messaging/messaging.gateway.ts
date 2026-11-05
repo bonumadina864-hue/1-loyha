@@ -55,7 +55,7 @@ export class MessagingGateway
       const payload = this.jwtService.verify(token, {
         secret: this.configService.get<string>(
           'JWT_ACCESS_SECRET',
-          'pairly_super_secure_jwt_access_secret_key_2026_dev',
+          'tmtg_super_secure_jwt_access_secret_key_2026_dev',
         ),
       });
 
