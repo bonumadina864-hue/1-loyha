@@ -24,6 +24,27 @@ export class User {
   @Column({ type: 'varchar', length: 255 })
   fullName!: string;
 
+  @Column({ type: 'varchar', length: 100, nullable: true })
+  firstName!: string | null;
+
+  @Column({ type: 'varchar', length: 100, nullable: true })
+  lastName!: string | null;
+
+  @Column({ type: 'int', nullable: true })
+  birthDay!: number | null;
+
+  @Column({ type: 'int', nullable: true })
+  birthMonth!: number | null;
+
+  @Column({ type: 'int', nullable: true })
+  birthYear!: number | null;
+
+  @Column({ type: 'varchar', length: 255, nullable: true })
+  googleAccount!: string | null;
+
+  @Column({ type: 'boolean', default: false })
+  googleConnected!: boolean;
+
   @Index({ unique: true })
   @Column({ type: 'varchar', length: 20, unique: true })
   phone!: string;

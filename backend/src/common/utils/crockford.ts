@@ -1,26 +1,27 @@
 import * as crypto from 'crypto';
 
-const CROCKFORD_ALPHABET = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
-
 /**
- * Generates a 10-character Crockford Base32 ID with ~50 bits of cryptographically secure entropy.
- * Excludes I, L, O, and U to prevent human transcription errors and ambiguity.
+ * Generates a numeric Public ID containing ONLY digits (e.g. 9-digit numeric ID: 749281045).
+ * Required by specification: "ID faqat sonlardan iborat bolsin".
  */
 export function generateCrockfordId(length = 10): string {
-  const randomBytes = crypto.randomBytes(length);
-  let result = '';
-  for (let i = 0; i < length; i++) {
-    const byte = randomBytes[i];
-    result += CROCKFORD_ALPHABET[byte % 32];
+  // First digit non-zero (1-9)
+  const firstDigit = (crypto.randomInt(1, 10)).toString();
+  let remaining = '';
+  for (let i = 1; i < length; i++) {
+    remaining += crypto.randomInt(0, 10).toString();
   }
-  return result;
+  return firstDigit + remaining;
 }
 
 /**
- * Validates whether a given string is a valid Crockford Base32 ID.
+ * Validates whether a given string is a valid numeric ID (between 8 and 12 digits, or legacy crockford).
  */
 export function isValidCrockfordId(id: string): boolean {
-  if (!id || id.length !== 10) return false;
-  const regex = /^[0-9ABCDEFGHJKMNPQRSTVWXYZ]{10}$/i;
-  return regex.test(id);
+  if (!id) return false;
+  // Accepts numeric ID of length 8 to 12 digits, or legacy crockford for backwards compatibility
+  const numericRegex = /^\d{6,12}$/;
+  const legacyRegex = /^[0-9ABCDEFGHJKMNPQRSTVWXYZ]{10}$/i;
+  return numericRegex.test(id.trim()) || legacyRegex.test(id.trim());
 }
+

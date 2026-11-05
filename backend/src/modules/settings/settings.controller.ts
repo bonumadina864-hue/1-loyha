@@ -25,6 +25,19 @@ import {
 export class SettingsController {
   constructor(private readonly settingsService: SettingsService) {}
 
+  @Get('profile')
+  async getProfile(@CurrentUser('sub') userId: string) {
+    return this.settingsService.getProfile(userId);
+  }
+
+  @Patch('profile')
+  async updateProfile(
+    @CurrentUser('sub') userId: string,
+    @Body() dto: any,
+  ) {
+    return this.settingsService.updateProfile(userId, dto);
+  }
+
   @Get('settings')
   async getSettings(@CurrentUser('sub') userId: string) {
     return this.settingsService.getSettings(userId);

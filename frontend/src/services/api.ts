@@ -9,6 +9,8 @@ export interface UserSession {
   refreshToken: string;
   fullName: string;
   email: string;
+  phone?: string;
+  expiresIn?: number;
 }
 
 export interface PairItem {

@@ -9,6 +9,7 @@ build/
 */build/
 .tmp/
 */.tmp/
+*.tsbuildinfo
 
 # Environment variables & secrets
 .env

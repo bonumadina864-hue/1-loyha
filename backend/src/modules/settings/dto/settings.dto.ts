@@ -87,4 +87,39 @@ export class DeleteAccountDto {
   @IsString()
   @IsNotEmpty()
   password!: string;
+
+  @IsOptional()
+  @IsString()
+  googleAccount?: string;
+
+  @IsOptional()
+  @IsString()
+  googlePassword?: string;
+}
+
+export class UpdateProfileDto {
+  @IsOptional()
+  @IsString()
+  firstName?: string;
+
+  @IsOptional()
+  @IsString()
+  lastName?: string;
+
+  @IsOptional()
+  birthDay?: number;
+
+  @IsOptional()
+  birthMonth?: number;
+
+  @IsOptional()
+  birthYear?: number;
+
+  @IsOptional()
+  @IsString()
+  googleAccount?: string;
+
+  @IsOptional()
+  @IsBoolean()
+  googleConnected?: boolean;
 }
